@@ -1,0 +1,95 @@
+html,
+body {
+   width: 100vw;
+   background-color: #000000;
+   font-family: 'Heebo';
+   overflow-x: hidden;
+}
+.global-wrapper {
+   max-width: 57rem;
+   margin: 0 auto;
+}
+.title {
+   color: #ffac3c;
+   font-size: 4rem;
+   font-weight: 700;
+   text-align: center;
+   margin: 1rem 0;
+   letter-spacing: 0.2rem;
+}
+input {
+   display: none;
+}
+.accordion {
+   width: 100%;
+}
+.accordion__item:not(:last-child) {
+   margin-bottom: 0.4%;
+}
+.accordion__title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2%;
+   background-image: linear-gradient(#161616 10%, #131313 100%);
+   color: #aa9c86;
+   cursor: pointer;
+}
+.accordion__title p {
+   margin: 0;
+   font-size: 1rem;
+   font-weight: 500;
+   letter-spacing: 0.06rem;
+   text-transform: uppercase;
+   text-shadow: 0.1rem 0.1rem 0.2rem rgb(0, 0, 0);
+   color: #ffffff;
+}
+.pointer {
+   width: 1.2rem;
+   height: 1.2rem;
+   transform: rotate(0deg);
+   transition: all 0.4s;
+}
+.accordion-content {
+   max-width: 96%;
+   margin: 0 auto;
+   background-color: #242424;
+   max-height: 0;
+   overflow-y: hidden;
+   opacity: 0;
+   cursor: pointer;
+}
+.accordion__image {
+   display: block;
+   width: 40%;
+   margin: 0 auto;
+}
+.accordion__input, .accordion-content {
+   transition: all 0.4s;
+}
+.accordion__input:checked + .accordion-content {
+   opacity: 1;
+   max-height: 100%;
+}
+.accordion__input:hover + .accordion-content {
+   opacity: 1;
+   max-height: 22rem;
+   transition: all 0.4s;
+}
+.accordion-content:hover {
+   opacity: 1;
+   max-height: 22rem;
+   transition: all 0.4s;
+}
+.accordion__title:hover .pointer {
+   transform: rotate(180deg);
+}
+
+@media (max-width: 920px) {
+   .title {
+      font-size: 7vw;
+   }
+   .accordion__title p {
+      font-size: 1.7vw;
+   }
+}
