@@ -23,6 +23,12 @@ input {
 .accordion {
    width: 100%;
 }
+.accordion:hover .pointer {
+   display: block;
+}
+.accordion:hover p {
+   color: #aa9c86;
+}
 .accordion__item:not(:last-child) {
    margin-bottom: 0.4%;
 }
@@ -45,8 +51,9 @@ input {
    color: #ffffff;
 }
 .pointer {
-   width: 1.2rem;
-   height: 1.2rem;
+   display: none;
+   width: 1.1rem;
+   height: 1.1rem;
    transform: rotate(0deg);
    transition: all 0.4s;
 }
