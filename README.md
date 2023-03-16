@@ -1,2 +1,2 @@
 # cssBayan
-### Link: https://lazyfossil.github.io/cssBayan/index.html
+### Link: https://lazyfossil.github.io/cssBayan/cssBayan/index.html
