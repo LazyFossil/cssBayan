@@ -1,0 +1,91 @@
+html,
+body {
+   width: 100vw;
+   background-color: #000000;
+   font-family: 'Heebo';
+   overflow-x: hidden;
+}
+.global-wrapper {
+   max-width: 54rem;
+   margin: 0 auto;
+}
+.title {
+   color: #ffac3c;
+   font-size: 4rem;
+   font-weight: 700;
+   text-align: center;
+   margin: 2rem 0;
+   letter-spacing: 0.2rem;
+}
+input {
+   display: none;
+}
+.accordion__label {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 0.5%;
+   cursor: pointer;
+}
+.accordion__title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-image: linear-gradient(#161616 10%, #131313 100%);
+   padding: 2%;
+   color: #ffffff;
+}
+.title__text {
+  font-size: 1rem;
+   margin: 0;
+}
+.pointer {
+   display: none;
+   width: 1.1rem;
+   transform: rotate(180deg);
+   transition: all 0.4s;
+}
+.accordion:hover .pointer {
+   display: block;
+}
+.accordion:hover .accordion__title {
+   color: #aa9c86;
+}
+.accordion__image {
+   display: block;
+   margin: 0 auto;
+   width: 40%;
+   max-height: 0;
+   padding: 0 27%;
+   background-color: #202020;
+   opacity: 0;
+   transition: all 0.4s;
+}
+.accordion__input:checked + .accordion__label .accordion__image {
+   opacity: 1;
+   max-height: 22rem;
+}
+.accordion__input:hover + .accordion__label .accordion__image {
+   opacity: 1;
+   max-height: 22rem;
+   transition: all 0.4s;
+}
+.accordion__label:hover .pointer {
+   transform: rotate(0deg);
+   transition: all 0.4s;
+}
+.accordion__input:checked + .accordion__label .pointer {
+   transform: rotate(0deg);
+   transition: all 0.4s;
+}
+@media (max-width: 864px) {
+   .title {
+      font-size: 7.4vw;
+      margin: 3.8vw;
+   }
+   .title__text {
+      font-size: 1.9vw;
+   }
+   .pointer {
+      width: 2vw;
+   }
+}
